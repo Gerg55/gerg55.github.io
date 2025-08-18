@@ -2,11 +2,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <title>C Game Engine</title>
+        <title>C Game Engine (now called GEngine)</title>
     </head>
 <body>
 
-    <h1>C Engine</h1>
+    <h1>GEngine</h1>
     <img src="Images/Cengine.png" height="411" width="691" title="A mountain 3D model, showcasing shadow mapping and model loading (very early stages of the engine)"/>
     <h2>Current features:</h2>
     <ul>
@@ -15,20 +15,33 @@
         <li>Simple material system</li>
         <li>Debug graphics</li>
         <li>Font atlas text rendering (won't be touching .ttf for a while)</li>
+        <li>Sparse set entity component system (ECS)</li>
     </ul>
-    <h3>Recent additions / changes (18/07/25):</h3>
+    <h3>Recent additions / changes (18/08/25):</h3>
     <ul>
        <li>Changed from .ply format to my custom .gply format for 3D models and animations</li>
        <li>Finished basic skeletal animation code, to be polished and re-added soon now I have an ECS</li>
        <li>Shader implementation refactor + geometry shader support</li>
-       <li>A decent sparse set ECS</li>
+       <li>Completely changed the way my engine is going to work</li>
     </ul>
-    <h3>Work in progress (18/07/25):</h3>
+    <h3>Work in progress (18/08/25):</h3>
     <ul>
-        <li>Asset manager with automatic loading and unloading (ref counting)</li>
-        <li>Scene system</li>
+        <li>Portable CMake build system</li>
+        <li>Changing the engine from being an executable runtime to a static library I link to a game executable</li>
+        <li>Entity "scripting" with native C (much easier with the new design)</li>
     </ul>
-    <h2>About:</h2>
+    <h3>To add in the future:</h3>
+    <ul>
+        <li>A proper scripting language, maybe not Lua</li>
+        <li>Asset manager with ref counting</li>
+        <li>A basic physics world</li>
+        <li>Particle systems, and other similar effects</li>
+        <li>Cascaded shadow mapping, post processing, lighting improvements</li>
+        <li>GUI</li>
+        <li>Asset packing and streamlined game building</li>
+        <li>Scene and asset editor</li>
+    </ul>
+    <h2>About (outdated, can't be bothered to change):</h2>
     <p>
         This is not a proper game engine yet; it is currently more a framework for 3D graphics because that is what I have spent most time on. I am currently trying to understand sparse-sets, archetypes and other ECS optimistations. Once I have added an ECS interface I am happy with, 
         I can work on integrating a few things I've worked on at the side and adding more game centred features so I can finally make a prototype game. After that I will probably start making the engine an 
