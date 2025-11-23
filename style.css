@@ -1,0 +1,36 @@
+head {
+    color: #0072FF
+}
+h1{
+    color: #0072FF
+}
+h2{
+    color: #0072FF
+}
+h3{
+    color: #0072FF
+}
+
+body {
+    font-family: monospace;
+    font-weight: 100;
+    background-color: #191919;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding-left:30px;
+}
+li{
+    color:#ffffff;
+}
+
+#evilButton {
+    font-size: 1.5rem;
+    border-radius:10px ;
+}
+#skeleton {
+    display: none;
+}
+
+#purp {
+    width:35%;
+}

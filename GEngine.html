@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>GEngine</title>
+    </head>
+<body>
+
+    <h1>A game engine written in C</h1>
+    <img src="Images/Cengine.png" height="411" width="691" title="A mountain 3D model, showcasing shadow mapping and model loading (very early stages of the engine)"/>
+    <h2>Current features:</h2>
+    <ul>
+        <li>.gply format model loading (includes skeletons and animations)</li>
+        <li>Standard shader using a Blinn-Phong lighting model</li>
+        <li>Simple material system</li>
+        <li>Debug graphics</li>
+        <li>Font atlas text rendering (won't be touching .ttf for a while)</li>
+        <li>Sparse set entity component system (ECS)</li>
+    </ul>
+    <h3>Recent additions / changes (18/08/25):</h3>
+    <ul>
+       <li>Changed from .ply format to my custom .gply format for 3D models and animations</li>
+       <li>Finished basic skeletal animation code, to be polished and re-added soon now I have an ECS</li>
+       <li>Shader implementation refactor + geometry shader support</li>
+       <li>Completely changed the way my engine is going to work</li>
+    </ul>
+    <h3>Work in progress (23/11/25):</h3>
+    <ul>
+        <li>Portable CMake build system</li>
+        <li>Changing the engine from being an executable runtime to a static library I link to a game executable</li>
+        <li>Improving the ECS and renderer</li>
+    </ul>
+    <h3>To add in the future:</h3>
+    <ul>
+        <li>Particle systems and other visual effects, could tie in with a physics engine</li>
+        <li>A physics engine to use in GEngine (will be made as a separate library project, see homepage)</li>
+        <li>Native C and maybe a custom scripting language</li>
+        <li>Asset manager with reference counting and a range of lifetime options</li>
+        <li>Optional modules (scene, physics, etc)</li>
+        <li>Cascaded shadow mapping, post processing, lighting improvements</li>
+        <li>A GUI library for both HUD and editor</li>
+        <li>Asset packing and streamlined game building</li>
+        <li>Scene and asset editor</li>
+    </ul>
+    <h2>About (outdated):</h2>
+    <p>
+        This is not a proper game engine yet; it is currently more a framework for 3D graphics because that is what I have spent most time 
+        doing. I am now working on a physics engine in order to drive interaction in the scene. This will be an optional module but will
+        be built in to the optional future scene module. After this I might start on integrating a few things I've worked on at the side
+        as well as the other future additions, hopefully to a state where I can make a prototype game. After that I may start polishing 
+        the engine user experience with an editor and other tools.
+    <br> </br>    
+        I wasn't working on the engine because I was having more fun experimenting in the engine. These are what I made:<br>
+        - Added OBB collision detection using separating axis theorem<br>
+        - Made a scene inspired by the "Final Demo" of <a href="https://www.youtube.com/watch?v=yyJ-hdISgnw"target="_blank">Sebastian Lague's software rasterizer</a> of a plane flying through procedural terrain<br>
+        - 3rd person character controller that I designed in Unity which I then added skeletal animation to (nicked the model from Sebatstain Lague)<br>
+        - State machine wandering NPC also with skeletal animation<br>
+        <br>
+    <img src="Images/engin_dev_collisionDetection.png" height="300" width="552" title="OBB collision detection and response + debug graphics"/>
+    <img src="Images/engin_dev_planeTerrain.png" height="333" width="576" title="plane through terrain (propeller was animated) + new procedural skybox and minecraft style sun quad" />
+    <img src="Images/engin_dev_skeletalAnim.png" height="330" width="573" title="Walking NPC (left) and idle player (right) in a desert"/>
+
+    <br> </br>    
+        Below is a video of the game engine as of 17/03/25. It demonstrates the (at the time) recent addition of proper transformations (translation, scaling and rotation) and the material system which includes texturing and specular mapping. The specular mapping is not apparent in 
+        the video because I had forgot to also transform the fragment position in the vertex shader making the specular highlights static on the objects. That has been fixed. 
+     </p><video controls src="Images/gameEngineCurrentState.mp4" width="800"> </video></p>
+    <hr>
+    <a href="index.html">Back to intro</a>
+</body>
+</html>
